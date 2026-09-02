@@ -15,13 +15,13 @@ public class Fase_2 {
 		console.println ("------------------");
 		console.println ();
 
-		console.print ("Quants n�meros primers vols veure? ");
+		console.print ("Quants números primers vols veure? ");
 		console.setForegroundColor(Color.GREEN);
 		quants = console.readInt();
 		console.resetColor ();
 		console.println ();
 
-		console.println ("Els "+quants+" primers n�meros primers s�n:\n ");
+		console.println ("Els "+quants+" primers números primers són:\n ");
 
 		candidatAPrimer = 2;
 		vistos = 0;

@@ -15,13 +15,13 @@ public class Fase_1 {
 		console.println ("-----------------------");
 		console.println ();
 
-		console.print ("De quin n�mero en vols calcular els divisors propis? ");
+		console.print ("De quin número en vols calcular els divisors propis? ");
 		console.setForegroundColor(Color.GREEN);
 		numero = console.readInt();
 		console.resetColor ();
 		console.println ();
 
-		console.println ("El n�mero "+numero+" t� "+DivisorsPropis(numero)+" divisors propis");
+		console.println ("El número "+numero+" té "+DivisorsPropis(numero)+" divisors propis");
 
 		console.setCursorPosition (0, console.getRows()-1);
 		console.print ("Premeu qualsevol tecla per acabar");

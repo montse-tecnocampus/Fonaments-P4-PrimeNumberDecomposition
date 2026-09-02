@@ -11,7 +11,7 @@ public class Fase_5_Final {
 		int numero;
 		int vegades;
 
-		console.println ("Fase 5. FINAL. DESCOMPOSICIÓ EN FACTORS PRIMERS");
+		console.println ("Fase 5. FINAL. DESCOMPOSICIÃ“ EN FACTORS PRIMERS");
 		console.println ("-----------------------------------------------");
 		console.println ();
 
@@ -21,10 +21,10 @@ public class Fase_5_Final {
 
 		if (esPrimer (numero)) {
 
-			console.println ("El número "+numero+" és ell mateix primer!");
+			console.println ("El nÃºmero "+numero+" Ã©s ell mateix primer");
 		} else {
 
-			console.println ("El número "+numero+" es descomposa en factors primers de la següent manera:");
+			console.println ("El nÃºmero "+numero+" es descomposa en factors primers de la segÃ¼ent manera:");
 			console.println ();
 			for (int i = 2; i <= numero/2; i++) {
 				if (esPrimer (i)) {
@@ -63,13 +63,13 @@ public class Fase_5_Final {
 		vegades = 0;
 		residu = n % candidat;
 		while (residu == 0) {
-			// si som aqui el residu és zero
+			// si som aqui el residu Ã©s zero
 			vegades++;
 			n = n / candidat;
 			residu = n % candidat;
 		}
-		// en arribar a aquest punt el residu de la divisiï¿½ ï¿½s
-		// diferent de zero i aixï¿½ vol dir que ja no es pot continuar dividint
+		// en arribar a aquest punt el residu de la divisiÃ³ Ã©s
+		// diferent de zero i aixÃ² vol dir que ja no es pot continuar dividint
 
 		return vegades;
 
@@ -84,7 +84,7 @@ public class Fase_5_Final {
 
 		while (!(numero>=min && numero<=max)) {
 			console.setForegroundColor(Color.RED);
-			console.println ("   Número Fora dels límits. Ha d'estar comprès entre "+min+" i "+max);
+			console.println ("   NÃºmero Fora dels lÃ­mits. Ha d'estar comprÃ¨s entre "+min+" i "+max);
 			console.resetColor ();
 			console.print (msg+" ["+min+","+max+"]: ");
 			console.setForegroundColor(Color.GREEN);

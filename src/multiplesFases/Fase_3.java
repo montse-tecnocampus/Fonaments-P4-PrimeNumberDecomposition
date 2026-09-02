@@ -14,11 +14,11 @@ public class Fase_3 {
 		console.println ("----------------------------");
 		console.println ();
 
-		console.print ("Quin és el número?  ");
+		console.print ("Quin Ã©s el nÃºmero?  ");
 		console.setForegroundColor(Color.GREEN);
 		elNumero = console.readInt();
 		console.resetColor ();
-		console.print ("Quin és el cadidat a divisor?  ");
+		console.print ("Quin Ã©s el candidat a divisor?  ");
 		console.setForegroundColor(Color.GREEN);
 		elCandidat = console.readInt();
 		console.resetColor ();
@@ -39,13 +39,13 @@ public class Fase_3 {
 		vegades = 0;
 		residu = n % candidat;
 		while (residu == 0) {
-			// si som aqui el residu és zero
+			// si som aqui el residu Ã©s zero
 			vegades++;
 			n = n / candidat;
 			residu = n % candidat;
 		}
-		// en arribar a aquest punt el residu de la divisió és
-		// diferent de zero i això vol dir que ja no es pot continuar dividint
+		// en arribar a aquest punt el residu de la divisiÃ³ Ã©s
+		// diferent de zero i aixÃ² vol dir que ja no es pot continuar dividint
 
 		return vegades;
 

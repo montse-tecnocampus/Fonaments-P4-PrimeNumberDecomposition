@@ -20,7 +20,7 @@ public class Fase_4 {
 		console.println ("Fase 4. FILTRE D'ENTRADA");
 		console.println ("------------------------");
 		console.println ();
-		console.println ("Aquest programa permet de fer proves de la funció llegirEscaient");
+		console.println ("Aquest programa permet de fer proves de la funciÃ³ llegirEscaient");
 		console.println ();
 
 		anarProvant = true;
@@ -30,15 +30,15 @@ public class Fase_4 {
 			valor = llegirEscaient ("\nintroduir numero", min, max, console);
 			if (valor<min || valor > max) {
 				console.setForegroundColor(Color.YELLOW);
-				console.println ("Valor incorrecte "+valor+". Sembla que la funció LlegirEscaient no fa bé la seva tasca");
+				console.println ("Valor incorrecte "+valor+". Sembla que la funciÃ³ LlegirEscaient no fa bÃ© la seva tasca");
 			} else {
-				console.print("El valor "+valor+" es troba dins dels límits establerts");
+				console.print("El valor "+valor+" es troba dins dels lÃ­mits establerts");
 				console.setForegroundColor(Color.GREEN);
 				console.println(" OK!");
 			}
 			console.resetColor();
 			console.println ();
-			console.print ("Vols fer una altra prova? (S/s per sí, qualsevol altra lletra per no) ");
+			console.print ("Vols fer una altra prova? (S/s per sÃ­, qualsevol altra lletra per no) ");
 			console.setForegroundColor(Color.GREEN);
 			resposta = console.readChar();
 			console.resetColor ();
@@ -65,7 +65,7 @@ public class Fase_4 {
 
 		while (!(numero>=min && numero<=max)) {
 			console.setForegroundColor(Color.RED);
-			console.println ("   Número Fora dels límits. Ha d'estar comprès entre "+min+" i "+max);
+			console.println ("   NÃºmero Fora dels lÃ­mits. Ha d'estar comprÃ¨s entre "+min+" i "+max);
 			console.resetColor ();
 			console.print (msg+" ["+min+","+max+"]: ");
 			console.setForegroundColor(Color.GREEN);
