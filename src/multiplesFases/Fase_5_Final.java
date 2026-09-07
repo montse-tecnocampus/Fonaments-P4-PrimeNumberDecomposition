@@ -42,7 +42,7 @@ public class Fase_5_Final {
 
 	}
 
-	static int divisorsPropis (int n) {
+	public static int divisorsPropis (int n) {
 		int q = 1;
 
 		for (int i = 2; i <= n/2; i++) {
@@ -53,11 +53,11 @@ public class Fase_5_Final {
 		return q;
 	}
 
-	static boolean esPrimer (int n) {
+	public static boolean esPrimer (int n) {
 		return divisorsPropis(n) == 1;
 	}
 
-	static int quantesVegadesDivideix (int n, int candidat) {
+	public static int quantesVegadesDivideix (int n, int candidat) {
 		int vegades, residu;
 
 		vegades = 0;
@@ -75,7 +75,7 @@ public class Fase_5_Final {
 
 	}
 
-	static int llegirEscaient (String msg, int min, int max, JConsole console) {
+	public static int llegirEscaient (String msg, int min, int max, JConsole console) {
 		int numero;
 
 		console.print (msg+" ["+min+","+max+"]: ");
