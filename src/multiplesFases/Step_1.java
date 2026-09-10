@@ -11,27 +11,27 @@ public class Step_1 {
 		
 		int numero;
 
-		console.println ("Fase 1. DIVISORS PROPIS");
+		console.println ("Step 1. PROPER DIVISORS");
 		console.println ("-----------------------");
 		console.println ();
 
-		console.print ("De quin número en vols calcular els divisors propis? ");
+		console.print ("Enter number: ");
 		console.setForegroundColor(Color.GREEN);
 		numero = console.readInt();
 		console.resetColor ();
 		console.println ();
 
-		console.println ("El número "+numero+" té "+DivisorsPropis(numero)+" divisors propis");
+		console.println ("Number "+numero+" has "+properDivisors(numero)+" proper divisors");
 
 		console.setCursorPosition (0, console.getRows()-1);
-		console.print ("Premeu qualsevol tecla per acabar");
+		console.print ("Press any key to exit");
 		console.readKey (true);
 		System.exit(0);
 		
 	}
 	
 	
-	private static int DivisorsPropis (int n) {
+	private static int properDivisors (int n) {
 
 		int q = 1;
 
