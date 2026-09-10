@@ -11,67 +11,69 @@ public class Step_4 {
 	{
 		JConsole console = new JConsole(80,20);
 		
-		boolean anarProvant;
-		int valor;
-		char resposta;
+		boolean keepTrying;
+		int value;
+		char answer;
 		int min, max;
-		Random alea = new Random();
+		Random rand = new Random();
 
-		console.println ("Fase 4. FILTRE D'ENTRADA");
-		console.println ("------------------------");
+		console.println ("Step 4. INPUT FILTER");
+		console.println ("--------------------");
 		console.println ();
-		console.println ("Aquest programa permet de fer proves de la funció llegirEscaient");
+		console.println ("This program allows you to test the \"read\" function");
 		console.println ();
 
-		anarProvant = true;
-		while (anarProvant) {
-			min = alea.nextInt(2000)+2;
-			max = alea.nextInt(200000-min)+min;
-			valor = llegirEscaient ("\nintroduir numero", min, max, console);
-			if (valor<min || valor > max) {
+		keepTrying = true;
+		while (keepTrying) {
+			min = rand.nextInt(2,2001);
+			max = rand.nextInt(200000);
+			//max = rand.nextInt(200000-min)+min;
+			value = read ("\nInsert number", min, max, console);
+			if (value<min || value > max) {
 				console.setForegroundColor(Color.YELLOW);
-				console.println ("Valor incorrecte "+valor+". Sembla que la funció LlegirEscaient no fa bé la seva tasca");
+				console.println ("Wrong value "+value+". It seems like the read function is not working properly");
 			} else {
-				console.print("El valor "+valor+" es troba dins dels límits establerts");
+				console.print("Value "+value+" within the specified interval");
 				console.setForegroundColor(Color.GREEN);
 				console.println(" OK!");
 			}
 			console.resetColor();
 			console.println ();
-			console.print ("Vols fer una altra prova? (S/s per sí, qualsevol altra lletra per no) ");
+			console.print ("Do you want to test it again? (Y/y for yes, any other char for no) ");
+		
 			console.setForegroundColor(Color.GREEN);
-			resposta = console.readChar();
+			answer = console.readChar();
 			console.resetColor ();
-			anarProvant = resposta == 's' || resposta == 'S';
-			if (anarProvant) {
+			keepTrying = answer == 'y' || answer == 'Y';
+			if (keepTrying) {
 				console.clear(); console.println(); 
 			}
 		}
 
 		console.println ("\n\n");
 		//Console.SetCursorPosition (0, Console.WindowHeight-1);
-		console.print ("Premeu qualsevol tecla per acabar");
+		console.print ("Press any key to exit");
 		console.readKey (true);
 		System.exit(0);
 	}
 
 
-	static int llegirEscaient (String msg, int min, int max, JConsole console) {
-		int numero;
+	static int read (String msg, int min, int max, JConsole console) {
+		int number;
 
 		console.print (msg+" ["+min+","+max+"]: ");
 		console.setForegroundColor(Color.GREEN);
-		numero = console.readInt();
+		number = console.readInt();
 
-		while (!(numero>=min && numero<=max)) {
+		while (!(number>=min && number<=max)) {
 			console.setForegroundColor(Color.RED);
-			console.println ("   Número Fora dels límits. Ha d'estar comprès entre "+min+" i "+max);
+			console.println ("   Number out of bounds. It must be within range "+min+" and "+max);
 			console.resetColor ();
 			console.print (msg+" ["+min+","+max+"]: ");
 			console.setForegroundColor(Color.GREEN);
-			numero = console.readInt();
+			number = console.readInt();
 		}
 		console.resetColor ();
-		return numero;
+		return number;
 	}
 }
