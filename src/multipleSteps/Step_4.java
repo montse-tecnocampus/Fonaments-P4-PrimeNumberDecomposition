@@ -51,29 +51,12 @@ public class Step_4 {
 		}
 
 		console.println ("\n\n");
-		//Console.SetCursorPosition (0, Console.WindowHeight-1);
 		console.print ("Press any key to exit");
 		console.readKey (true);
 		System.exit(0);
 	}
 
 
-	public static int read (String msg, int min, int max, JConsole console) {
-		int number;
-
-		console.print (msg+" ["+min+","+max+"]: ");
-		console.setForegroundColor(Color.GREEN);
-		number = console.readInt();
-
-		while (!(number>=min && number<=max)) {
-			console.setForegroundColor(Color.RED);
-			console.println ("   Number out of bounds. It must be within range "+min+" and "+max);
-			console.resetColor ();
-			console.print (msg+" ["+min+","+max+"]: ");
-			console.setForegroundColor(Color.GREEN);
-			number = console.readInt();
-		}
-		console.resetColor ();
-		return number;
-	}
+	/*TODO: Write the code here for the filter function that
+	 "insists" until it obtains a number within the specified range */
 }
