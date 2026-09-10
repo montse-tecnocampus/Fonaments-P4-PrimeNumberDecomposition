@@ -21,7 +21,7 @@ public class Step_1 {
 		console.resetColor ();
 		console.println ();
 
-		console.println ("Number "+numero+" has "+properDivisors(numero)+" proper divisors");
+		console.println ("Number "+numero+" has "+countProperDivisors(numero)+" proper divisors");
 
 		console.setCursorPosition (0, console.getRows()-1);
 		console.print ("Press any key to exit");
@@ -31,7 +31,7 @@ public class Step_1 {
 	}
 	
 	
-	private static int properDivisors (int n) {
+	private static int countProperDivisors (int n) {
 
 		int q = 1;
 
