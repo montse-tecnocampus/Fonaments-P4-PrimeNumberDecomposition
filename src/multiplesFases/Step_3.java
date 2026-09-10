@@ -8,46 +8,46 @@ public class Step_3 {
 	public static void main (String[] args)
 	{
 		JConsole console = new JConsole(80,20);
-		int elNumero, elCandidat;
+		int number, candidate;
 
-		console.println ("Fase 3. VEGADES QUE DIVIDEIX");
-		console.println ("----------------------------");
+		console.println ("Step 3. TIMES IT DIVIDES");
+		console.println ("------------------------");
 		console.println ();
 
-		console.print ("Quin és el número?  ");
+		console.print ("What is the number? ");
 		console.setForegroundColor(Color.GREEN);
-		elNumero = console.readInt();
+		number = console.readInt();
 		console.resetColor ();
-		console.print ("Quin és el candidat a divisor?  ");
+		console.print ("What is the candidate divisor? ");
 		console.setForegroundColor(Color.GREEN);
-		elCandidat = console.readInt();
+		candidate = console.readInt();
 		console.resetColor ();
 		console.println ();
 
-		console.println (elCandidat+" divideix "+elNumero+" "+quantesVegadesDivideix(elNumero,elCandidat)+" vegades"); 
+		console.println (candidate+" divides "+number+" "+timesItCanBeDivided(number,candidate)+" times"); 
 
 
 		console.setCursorPosition (0, console.getRows()-1);
-		console.print ("Premeu qualsevol tecla per acabar");
+		console.print ("Press any key to exit");
 		console.readKey (true);
 		System.exit(0);
 	}
 
-	static int quantesVegadesDivideix (int n, int candidat) {
-		int vegades, residu;
+	static int timesItCanBeDivided (int number, int candidate) {
+		int times, remainer;
 
-		vegades = 0;
-		residu = n % candidat;
-		while (residu == 0) {
+		times = 0;
+		remainer = number % candidate;
+		while (remainer == 0) {
 			// si som aqui el residu és zero
-			vegades++;
-			n = n / candidat;
-			residu = n % candidat;
+			times++;
+			number = number / candidate;
+			remainer = number % candidate;
 		}
 		// en arribar a aquest punt el residu de la divisió és
 		// diferent de zero i això vol dir que ja no es pot continuar dividint
 
-		return vegades;
+		return times;
 
 	}
 }

@@ -31,12 +31,12 @@ class TestFase5 {
 
     @Test
     void testQuantesVegadesDivideix() {
-        assertEquals(2, Fase_5_Final.quantesVegadesDivideix(12, 2));
-        assertEquals(1, Fase_5_Final.quantesVegadesDivideix(12, 3));
-        assertEquals(0, Fase_5_Final.quantesVegadesDivideix(12, 5));
+        assertEquals(2, Fase_5_Final.timesItCanBeDivided(12, 2));
+        assertEquals(1, Fase_5_Final.timesItCanBeDivided(12, 3));
+        assertEquals(0, Fase_5_Final.timesItCanBeDivided(12, 5));
 
-        assertEquals(4, Fase_5_Final.quantesVegadesDivideix(16, 2));
-        assertEquals(3, Fase_5_Final.quantesVegadesDivideix(27, 3));
-        assertEquals(1, Fase_5_Final.quantesVegadesDivideix(45, 5));
+        assertEquals(4, Fase_5_Final.timesItCanBeDivided(16, 2));
+        assertEquals(3, Fase_5_Final.timesItCanBeDivided(27, 3));
+        assertEquals(1, Fase_5_Final.timesItCanBeDivided(45, 5));
     }
 }
