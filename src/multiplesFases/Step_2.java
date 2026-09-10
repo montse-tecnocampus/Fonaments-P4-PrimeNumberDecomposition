@@ -9,43 +9,43 @@ public class Step_2 {
 	public static void main (String[] args)
 	{
 		JConsole console = new JConsole(80,40);
-		int quants, vistos, candidatAPrimer;
+		int howMany, seen, primeCandidate;
 
 		console.println ("Fase 2. PRIMALITAT");
 		console.println ("------------------");
 		console.println ();
 
-		console.print ("Quants números primers vols veure? ");
+		console.print ("How many prime numbers do you wish to see?");
 		console.setForegroundColor(Color.GREEN);
-		quants = console.readInt();
+		howMany = console.readInt();
 		console.resetColor ();
 		console.println ();
 
-		console.println ("Els "+quants+" primers números primers són:\n ");
+		console.println ("The first "+howMany+" prime numbers are:\n ");
 
-		candidatAPrimer = 2;
-		vistos = 0;
-		while (vistos < quants) {
-			if (esPrimer (candidatAPrimer)) {
-				vistos++;
-				console.println ("  "+vistos+".-\t "+candidatAPrimer);
+		primeCandidate = 2;
+		seen = 0;
+		while (seen < howMany) {
+			if (isPrimeNumber (primeCandidate)) {
+				seen++;
+				console.println ("  "+seen+".-\t "+primeCandidate);
 			}
-			candidatAPrimer++;
+			primeCandidate++;
 		}
 		// en arribar a aquest punt vistos == quants
 
 		console.println ("\n\n");
 
-		//Console.SetCursorPosition (0, Console.WindowHeight-1);
-		console.print ("Premeu qualsevol tecla per acabar");
+		console.print ("Press any key to exit");
 		console.readKey (true);
 		System.exit(0);
 	}
 
-	static int divisorsPropis (int n) {
+	static int countProperDivisors (int n) {
+
 		int q = 1;
 
-		for (int i = 2; i <=Math.sqrt(n); i++) {
+		for (int i = 2; i <= Math.sqrt(n); i++) {
 			if (n%i==0) {
 				q++;
 			}
@@ -53,8 +53,8 @@ public class Step_2 {
 		return q;
 	}
 
-	static boolean esPrimer (int n) {
-		return divisorsPropis(n) == 1;
+	static boolean isPrimeNumber (int n) {
+		return countProperDivisors(n) == 1;
 	}
 	
 }

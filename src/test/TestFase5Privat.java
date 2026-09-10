@@ -24,19 +24,19 @@ public class TestFase5Privat {
 	@Test
 	void testEsPrimer() {
 	    // Primers
-	    assertTrue(Fase_5_Final.esPrimer(2));
-	    assertTrue(Fase_5_Final.esPrimer(3));
-	    assertTrue(Fase_5_Final.esPrimer(5));
-	    assertTrue(Fase_5_Final.esPrimer(17));
-	    assertTrue(Fase_5_Final.esPrimer(97));
+	    assertTrue(Fase_5_Final.isPrimeNumber(2));
+	    assertTrue(Fase_5_Final.isPrimeNumber(3));
+	    assertTrue(Fase_5_Final.isPrimeNumber(5));
+	    assertTrue(Fase_5_Final.isPrimeNumber(17));
+	    assertTrue(Fase_5_Final.isPrimeNumber(97));
 
 	    // No primers
-	    assertFalse(Fase_5_Final.esPrimer(4));
-	    assertFalse(Fase_5_Final.esPrimer(10));
-	    assertFalse(Fase_5_Final.esPrimer(12));
-	    assertFalse(Fase_5_Final.esPrimer(100));
-	    assertFalse(Fase_5_Final.esPrimer(100));
-	    assertFalse(Fase_5_Final.esPrimer(39));
+	    assertFalse(Fase_5_Final.isPrimeNumber(4));
+	    assertFalse(Fase_5_Final.isPrimeNumber(10));
+	    assertFalse(Fase_5_Final.isPrimeNumber(12));
+	    assertFalse(Fase_5_Final.isPrimeNumber(100));
+	    assertFalse(Fase_5_Final.isPrimeNumber(100));
+	    assertFalse(Fase_5_Final.isPrimeNumber(39));
 	}
 	
 	@Test
