@@ -25,14 +25,10 @@ public class Step_2 {
 
 		primeCandidate = 2;
 		seen = 0;
-		while (seen < howMany) {
-			if (isPrimeNumber (primeCandidate)) {
-				seen++;
-				console.println ("  "+seen+".-\t "+primeCandidate);
-			}
-			primeCandidate++;
+		while (/*TODO: Complete condition*/) {
+			//TODO: Complete code
 		}
-		// en arribar a aquest punt vistos == quants
+		// at this point, seen...
 
 		console.println ("\n\n");
 
@@ -41,20 +37,8 @@ public class Step_2 {
 		System.exit(0);
 	}
 
-	public static int countProperDivisors (int n) {
+	//TODO: Copy the function developed in the previous phase here
 
-		int q = 1;
-
-		for (int i = 2; i <= Math.sqrt(n); i++) {
-			if (n%i==0) {
-				q++;
-			}
-		}
-		return q;
-	}
-
-	static boolean isPrimeNumber (int n) {
-		return countProperDivisors(n) == 1;
-	}
+	//TODO: Write the function that determines whether a number is prime or not here.
 	
 }
