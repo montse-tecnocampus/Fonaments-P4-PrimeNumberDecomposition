@@ -14,18 +14,7 @@ public class Step_3 {
 		console.println ("------------------------");
 		console.println ();
 
-		console.print ("What is the number? ");
-		console.setForegroundColor(Color.GREEN);
-		number = console.readInt();
-		console.resetColor ();
-		console.print ("What is the candidate divisor? ");
-		console.setForegroundColor(Color.GREEN);
-		candidate = console.readInt();
-		console.resetColor ();
-		console.println ();
-
-		console.println (candidate+" divides "+number+" "+timesItCanBeDivided(number,candidate)+" times"); 
-
+		//TODO: Complete following instructions in the statement
 
 		console.setCursorPosition (0, console.getRows()-1);
 		console.print ("Press any key to exit");
@@ -33,21 +22,6 @@ public class Step_3 {
 		System.exit(0);
 	}
 
-	public static int timesItCanBeDivided (int number, int candidate) {
-		int times, remainer;
-
-		times = 0;
-		remainer = number % candidate;
-		while (remainer == 0) {
-			// si som aqui el residu és zero
-			times++;
-			number = number / candidate;
-			remainer = number % candidate;
-		}
-		// en arribar a aquest punt el residu de la divisió és
-		// diferent de zero i això vol dir que ja no es pot continuar dividint
-
-		return times;
-
-	}
+	//TODO: Write the code here for the function that calculates how many times
+	// a number is divisible by another.
 }
