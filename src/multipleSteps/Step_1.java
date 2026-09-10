@@ -9,19 +9,11 @@ public class Step_1 {
 	
 		JConsole console = new JConsole(80,20);
 		
-		int numero;
-
-		console.println ("Step 1. PROPER DIVISORS");
-		console.println ("-----------------------");
-		console.println ();
-
-		console.print ("Enter number: ");
-		console.setForegroundColor(Color.GREEN);
-		numero = console.readInt();
-		console.resetColor ();
-		console.println ();
-
-		console.println ("Number "+numero+" has "+countProperDivisors(numero)+" proper divisors");
+		/*TODO: Complete an execution entry point (main) that asks
+		the user for an integer and responds with the number
+		of proper divisors of that number, obtained by invoking
+		the countProperDivisors function.*/
+	
 
 		console.setCursorPosition (0, console.getRows()-1);
 		console.print ("Press any key to exit");
@@ -31,17 +23,7 @@ public class Step_1 {
 	}
 	
 	
-	public static int countProperDivisors (int n) {
-
-		int q = 1;
-
-		for (int i = 2; i <= Math.sqrt(n); i++) {
-			if (n%i==0) {
-				q++;
-			}
-		}
-		return q;
-	}
+	//TODO: Write the code for the function that calculates the number of proper divisors of its parameter here
 	
 
 }
