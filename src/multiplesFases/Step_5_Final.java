@@ -8,35 +8,34 @@ public class Step_5_Final {
 	{
 		JConsole console = new JConsole(80,20);
 		
-		int numero;
-		int vegades;
+		int number;
+		int times;
 
-		console.println ("Fase 5. FINAL. DESCOMPOSICIÓ EN FACTORS PRIMERS");
-		console.println ("-----------------------------------------------");
+		console.println ("Step 5. THE END. DECOMPOSITION IN PRIME FACTORS");
+		console.println ("---------------------------------------------");
 		console.println ();
 
-		numero = llegirEscaient ("Numero que s'ha de factoritzar", 2, 199999, console);
+		number = read ("Number that will be factorized", 2, 199999, console);
 
 		console.println ();
 
-		if (esPrimer (numero)) {
-
-			console.println ("El número "+numero+" és ell mateix primer");
-		} else {
-
-			console.println ("El número "+numero+" es descomposa en factors primers de la següent manera:");
+		if (isPrimeNumber (number)) {
+			console.println (number+" is itself a prime number!");
+		} 
+		else {
+			console.println (number+" is decomposed in prime numbers in the following way:");
 			console.println ();
-			for (int i = 2; i <= numero/2; i++) {
-				if (esPrimer (i)) {
-					vegades = quantesVegadesDivideix (numero, i);
-					if (vegades != 0) {
-						console.println ("   "+i+" elevat a "+vegades);
+			for (int i = 2; i <= number/2; i++) {
+				if (isPrimeNumber (i)) {
+					times = timesItCanBeDivided (number, i);
+					if (times != 0) {
+						console.println ("   "+i+" to the power of "+times);
 					}
 				}
 			}
 		}
 		console.setCursorPosition (0, console.getRows() - 1);
-		console.print ("Premeu qualsevol tecla per acabar");
+		console.print ("Press any key to exit");
 		console.readKey (true);
 		System.exit(0);
 
@@ -53,44 +52,56 @@ public class Step_5_Final {
 		return q;
 	}
 
-	public static boolean esPrimer (int n) {
-		return divisorsPropis(n) == 1;
+	static int countProperDivisors (int n) {
+
+		int q = 1;
+
+		for (int i = 2; i <= Math.sqrt(n); i++) {
+			if (n%i==0) {
+				q++;
+			}
+		}
+		return q;
 	}
 
-	public static int quantesVegadesDivideix (int n, int candidat) {
-		int vegades, residu;
+	static boolean isPrimeNumber (int n) {
+		return countProperDivisors(n) == 1;
+	}
 
-		vegades = 0;
-		residu = n % candidat;
-		while (residu == 0) {
+	public static int timesItCanBeDivided (int number, int candidate) {
+		int times, remainer;
+
+		times = 0;
+		remainer = number % candidate;
+		while (remainer == 0) {
 			// si som aqui el residu és zero
-			vegades++;
-			n = n / candidat;
-			residu = n % candidat;
+			times++;
+			number = number / candidate;
+			remainer = number % candidate;
 		}
 		// en arribar a aquest punt el residu de la divisió és
 		// diferent de zero i això vol dir que ja no es pot continuar dividint
 
-		return vegades;
+		return times;
 
 	}
 
-	public static int llegirEscaient (String msg, int min, int max, JConsole console) {
-		int numero;
+	public static int read (String msg, int min, int max, JConsole console) {
+		int number;
 
 		console.print (msg+" ["+min+","+max+"]: ");
 		console.setForegroundColor(Color.GREEN);
-		numero = console.readInt();
+		number = console.readInt();
 
-		while (!(numero>=min && numero<=max)) {
+		while (!(number>=min && number<=max)) {
 			console.setForegroundColor(Color.RED);
-			console.println ("   Número Fora dels límits. Ha d'estar comprès entre "+min+" i "+max);
+			console.println ("   Number out of bounds. It must be within range "+min+" and "+max);
 			console.resetColor ();
 			console.print (msg+" ["+min+","+max+"]: ");
 			console.setForegroundColor(Color.GREEN);
-			numero = console.readInt();
+			number = console.readInt();
 		}
 		console.resetColor ();
-		return numero;
+		return number;
 	}
 }
