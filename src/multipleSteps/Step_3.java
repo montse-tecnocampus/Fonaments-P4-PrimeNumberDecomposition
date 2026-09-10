@@ -1,4 +1,4 @@
-package multiplesFases;
+package multipleSteps;
 
 import java.awt.Color;
 import jconsole.JConsole;
