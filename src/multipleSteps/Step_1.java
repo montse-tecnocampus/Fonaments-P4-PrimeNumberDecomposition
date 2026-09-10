@@ -31,7 +31,7 @@ public class Step_1 {
 	}
 	
 	
-	private static int countProperDivisors (int n) {
+	public static int countProperDivisors (int n) {
 
 		int q = 1;
 

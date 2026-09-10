@@ -58,7 +58,7 @@ public class Step_4 {
 	}
 
 
-	static int read (String msg, int min, int max, JConsole console) {
+	public static int read (String msg, int min, int max, JConsole console) {
 		int number;
 
 		console.print (msg+" ["+min+","+max+"]: ");

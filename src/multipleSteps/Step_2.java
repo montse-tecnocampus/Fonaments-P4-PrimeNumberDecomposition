@@ -41,7 +41,7 @@ public class Step_2 {
 		System.exit(0);
 	}
 
-	static int countProperDivisors (int n) {
+	public static int countProperDivisors (int n) {
 
 		int q = 1;
 

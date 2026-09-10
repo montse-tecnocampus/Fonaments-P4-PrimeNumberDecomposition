@@ -33,7 +33,7 @@ public class Step_3 {
 		System.exit(0);
 	}
 
-	static int timesItCanBeDivided (int number, int candidate) {
+	public static int timesItCanBeDivided (int number, int candidate) {
 		int times, remainer;
 
 		times = 0;
