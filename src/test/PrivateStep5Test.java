@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import multipleSteps.Step_5_Final;
 
-public class TestFase5Privat {
+public class PrivateStep5Test {
 	
 	@Test
 	void testDivisorsPropis() {
