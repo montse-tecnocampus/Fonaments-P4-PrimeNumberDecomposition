@@ -3,7 +3,7 @@ package multiplesFases;
 import java.awt.Color;
 import jconsole.JConsole;
 
-public class Fase_5_Final {
+public class Step_5_Final {
 	public static void main (String[] args)
 	{
 		JConsole console = new JConsole(80,20);

@@ -4,7 +4,7 @@ import java.awt.Color;
 
 import jconsole.JConsole;
 
-public class Fase_2 {
+public class Step_2 {
 
 	public static void main (String[] args)
 	{

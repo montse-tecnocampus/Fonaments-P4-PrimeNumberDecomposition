@@ -5,7 +5,7 @@ import java.util.Random;
 
 import jconsole.JConsole;
 
-public class Fase_4 {
+public class Step_4 {
 	
 	public static void main (String[] args)
 	{
