@@ -11,7 +11,7 @@ public class Step_2 {
 		JConsole console = new JConsole(80,40);
 		int howMany, seen, primeCandidate;
 
-		console.println ("Fase 2. PRIME NUMBERS");
+		console.println ("Step 2. PRIME NUMBERS");
 		console.println ("---------------------");
 		console.println ();
 
