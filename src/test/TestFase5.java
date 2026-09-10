@@ -9,11 +9,11 @@ class TestFase5 {
 
     @Test
     void testDivisorsPropis() {
-        assertEquals(1, Step_5_Final.divisorsPropis(2));
-        assertEquals(1, Step_5_Final.divisorsPropis(3));
-        assertEquals(2, Step_5_Final.divisorsPropis(4));
-        assertEquals(5, Step_5_Final.divisorsPropis(12));
-        assertEquals(4, Step_5_Final.divisorsPropis(16));
+        assertEquals(1, Step_5_Final.countProperDivisors(2));
+        assertEquals(1, Step_5_Final.countProperDivisors(3));
+        assertEquals(2, Step_5_Final.countProperDivisors(4));
+        assertEquals(5, Step_5_Final.countProperDivisors(12));
+        assertEquals(4, Step_5_Final.countProperDivisors(16));
     }
 
     @Test

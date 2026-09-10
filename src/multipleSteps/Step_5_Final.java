@@ -41,18 +41,8 @@ public class Step_5_Final {
 
 	}
 
-	public static int divisorsPropis (int n) {
-		int q = 1;
 
-		for (int i = 2; i <= n/2; i++) {
-			if (n%i==0) {
-				q++;
-			}
-		}
-		return q;
-	}
-
-	static int countProperDivisors (int n) {
+	public static int countProperDivisors (int n) {
 
 		int q = 1;
 
