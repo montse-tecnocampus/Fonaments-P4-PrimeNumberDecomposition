@@ -11,11 +11,11 @@ public class Step_2 {
 		JConsole console = new JConsole(80,40);
 		int howMany, seen, primeCandidate;
 
-		console.println ("Fase 2. PRIMALITAT");
-		console.println ("------------------");
+		console.println ("Fase 2. PRIME NUMBERS");
+		console.println ("---------------------");
 		console.println ();
 
-		console.print ("How many prime numbers do you wish to see?");
+		console.print ("How many prime numbers do you wish to see? ");
 		console.setForegroundColor(Color.GREEN);
 		howMany = console.readInt();
 		console.resetColor ();
