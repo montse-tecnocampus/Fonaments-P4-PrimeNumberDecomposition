@@ -64,7 +64,7 @@ public class Step_5_Final {
 		return q;
 	}
 
-	static boolean isPrimeNumber (int n) {
+	public static boolean isPrimeNumber (int n) {
 		return countProperDivisors(n) == 1;
 	}
 
