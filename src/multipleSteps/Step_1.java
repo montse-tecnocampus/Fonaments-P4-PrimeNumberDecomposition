@@ -38,6 +38,9 @@ public class Step_1 {
 		for (int i = 2; i <= Math.sqrt(n); i++) {
 			if (n%i==0) {
 				q++;
+				if(i != n/i) { //When you find a divisor, you also count the other one (the partner that's greater than the square root, except if it's the number itself)
+					q++;
+				}
 			}
 		}
 		return q;
