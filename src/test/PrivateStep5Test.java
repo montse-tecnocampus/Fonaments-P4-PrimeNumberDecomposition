@@ -8,7 +8,7 @@ import multipleSteps.Step_5_Final;
 public class PrivateStep5Test {
 	
 	@Test
-	void testDivisorsPropis() {
+	void testProperDivisors() {
 	    assertEquals(1, Step_5_Final.countProperDivisors(2));
 	    assertEquals(1, Step_5_Final.countProperDivisors(3));
 	    assertEquals(2, Step_5_Final.countProperDivisors(4));
@@ -21,7 +21,7 @@ public class PrivateStep5Test {
 	}
 	
 	@Test
-	void testEsPrimer() {
+	void testIsPrime() {
 	    // Primers
 	    assertTrue(Step_5_Final.isPrimeNumber(2));
 	    assertTrue(Step_5_Final.isPrimeNumber(3));
@@ -39,7 +39,7 @@ public class PrivateStep5Test {
 	}
 	
 	@Test
-	void testQuantesVegadesDivideix() {
+	void testTimesItCanBeDivided() {
 	    assertEquals(2, Step_5_Final.timesItCanBeDivided(12, 2));
 	    assertEquals(1, Step_5_Final.timesItCanBeDivided(12, 3));
 	    assertEquals(0, Step_5_Final.timesItCanBeDivided(12, 5));
