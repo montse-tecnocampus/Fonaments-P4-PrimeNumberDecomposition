@@ -8,8 +8,8 @@ import multipleSteps.Step_5_Final;
 class Step5Test {
 
     @Test
-    void testDivisorsPropis() {
-    	assertEquals(1, Step_5_Final.countProperDivisors(2));
+    void testProperDivisors() {
+        assertEquals(1, Step_5_Final.countProperDivisors(2));
         assertEquals(1, Step_5_Final.countProperDivisors(3));
         assertEquals(2, Step_5_Final.countProperDivisors(4));
         assertEquals(5, Step_5_Final.countProperDivisors(12));
@@ -17,7 +17,7 @@ class Step5Test {
     }
 
     @Test
-    void testEsPrimer() {
+    void testIsPrime() {
         assertTrue(Step_5_Final.isPrimeNumber(2));
         assertTrue(Step_5_Final.isPrimeNumber(3));
         assertTrue(Step_5_Final.isPrimeNumber(5));
@@ -30,7 +30,7 @@ class Step5Test {
     }
 
     @Test
-    void testQuantesVegadesDivideix() {
+    void testTimesItCanBeDivided() {
         assertEquals(2, Step_5_Final.timesItCanBeDivided(12, 2));
         assertEquals(1, Step_5_Final.timesItCanBeDivided(12, 3));
         assertEquals(0, Step_5_Final.timesItCanBeDivided(12, 5));
