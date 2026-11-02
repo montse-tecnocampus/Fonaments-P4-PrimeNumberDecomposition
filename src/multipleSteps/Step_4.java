@@ -26,7 +26,7 @@ public class Step_4 {
 		keepTrying = true;
 		while (keepTrying) {
 			min = rand.nextInt(2,2001);
-			max = rand.nextInt(200000);
+			max = rand.nextInt(min,200000);
 			value = read ("\nInsert number", min, max, console);
 			if (value<min || value > max) {
 				console.setForegroundColor(Color.YELLOW);
